@@ -151,7 +151,7 @@ namespace miniräknare
 
         }
 
-        private void button22_Click(object sender, EventArgs e)
+        private void button22_Click(object sender, EventArgs e)//MC
         {
             minne = 0;
         }
