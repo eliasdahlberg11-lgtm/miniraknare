@@ -51,6 +51,9 @@
             button20 = new Button();
             button21 = new Button();
             button22 = new Button();
+            button23 = new Button();
+            button24 = new Button();
+            button25 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -264,12 +267,13 @@
             // 
             // button21
             // 
-            button21.Location = new Point(132, 271);
+            button21.Location = new Point(132, 173);
             button21.Name = "button21";
             button21.Size = new Size(75, 43);
             button21.TabIndex = 28;
-            button21.Text = "Pi";
+            button21.Text = "x^2";
             button21.UseVisualStyleBackColor = true;
+            button21.Click += button21_Click;
             // 
             // button22
             // 
@@ -281,11 +285,44 @@
             button22.UseVisualStyleBackColor = true;
             button22.Click += button22_Click;
             // 
+            // button23
+            // 
+            button23.Location = new Point(132, 222);
+            button23.Name = "button23";
+            button23.Size = new Size(75, 43);
+            button23.TabIndex = 30;
+            button23.Text = "√x";
+            button23.UseVisualStyleBackColor = true;
+            button23.Click += button23_Click;
+            // 
+            // button24
+            // 
+            button24.Location = new Point(132, 271);
+            button24.Name = "button24";
+            button24.Size = new Size(75, 43);
+            button24.TabIndex = 31;
+            button24.Text = "DEC";
+            button24.UseVisualStyleBackColor = true;
+            button24.Click += button24_Click;
+            // 
+            // button25
+            // 
+            button25.Location = new Point(51, 124);
+            button25.Name = "button25";
+            button25.Size = new Size(75, 43);
+            button25.TabIndex = 32;
+            button25.Text = "BIN";
+            button25.UseVisualStyleBackColor = true;
+            button25.Click += button25_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button25);
+            Controls.Add(button24);
+            Controls.Add(button23);
             Controls.Add(button22);
             Controls.Add(button21);
             Controls.Add(button20);
@@ -340,5 +377,8 @@
         private Button button20;
         private Button button21;
         private Button button22;
+        private Button button23;
+        private Button button24;
+        private Button button25;
     }
 }

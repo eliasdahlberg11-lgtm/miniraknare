@@ -1,3 +1,5 @@
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace miniräknare
 {
     public partial class Form1 : Form
@@ -92,7 +94,7 @@ namespace miniräknare
             textBox1.Text = "";
         }
 
-        private void button19_Click(object sender, EventArgs e)
+        private void button19_Click(object sender, EventArgs e)//delat
         {
             forsta_talet = Convert.ToDouble(textBox1.Text);
             raknesatt = "/";
@@ -129,6 +131,7 @@ namespace miniräknare
 
         private void button6_Click(object sender, EventArgs e)//pi
         {
+            textBox1.Text = "";
             textBox1.Text = textBox1.Text + "3,141";
         }
 
@@ -137,7 +140,7 @@ namespace miniräknare
             minne = Convert.ToDouble(textBox1.Text);
         }
 
-        private void button20_Click(object sender, EventArgs e)
+        private void button20_Click(object sender, EventArgs e)//MR
         {
             if (minne != 0)
             {
@@ -154,6 +157,37 @@ namespace miniräknare
         private void button22_Click(object sender, EventArgs e)//MC
         {
             minne = 0;
+        }
+
+        private void button21_Click(object sender, EventArgs e)// upphöjt till
+        {
+            textBox1.Text = (Convert.ToDouble(textBox1.Text) * Convert.ToDouble(textBox1.Text)).ToString(); ;
+        }
+
+        private void button23_Click(object sender, EventArgs e)//roten ur
+        {
+            if (Convert.ToDouble(textBox1.Text) <= 0)
+            {
+                textBox1.Text = "ERROR";
+            }
+            else
+            {
+                double result = Math.Sqrt(Convert.ToDouble(textBox1.Text));
+                textBox1.Text = result.ToString();
+            }
+
+        }
+
+        private void button24_Click(object sender, EventArgs e)//DEC
+        {
+
+            textBox1.Text = Convert.ToInt32(textBox1.Text, 2).ToString();
+
+        }
+
+        private void button25_Click(object sender, EventArgs e)//BIN
+        {
+
         }
     }
 }
