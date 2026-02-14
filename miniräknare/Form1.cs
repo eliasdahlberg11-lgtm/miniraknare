@@ -189,5 +189,17 @@ namespace miniräknare
         {
 
         }
+
+        private void button26_Click(object sender, EventArgs e)//%
+        {
+            if (raknesatt == "+");
+            {
+                textBox1.Text = (forsta_talet * ((Convert.ToDouble(textBox1.Text) / 100) + 1)).ToString();
+            }
+            if (raknesatt == "-")
+            {
+                textBox1.Text = (forsta_talet * (1 - (Convert.ToDouble(textBox1.Text) / 100))).ToString(); //ska fixas
+            }
+        }
     }
 }

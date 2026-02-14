@@ -54,6 +54,7 @@
             button23 = new Button();
             button24 = new Button();
             button25 = new Button();
+            button26 = new Button();
             SuspendLayout();
             // 
             // textBox1
@@ -315,11 +316,22 @@
             button25.UseVisualStyleBackColor = true;
             button25.Click += button25_Click;
             // 
+            // button26
+            // 
+            button26.Location = new Point(618, 271);
+            button26.Name = "button26";
+            button26.Size = new Size(75, 43);
+            button26.TabIndex = 33;
+            button26.Text = "%";
+            button26.UseVisualStyleBackColor = true;
+            button26.Click += button26_Click;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button26);
             Controls.Add(button25);
             Controls.Add(button24);
             Controls.Add(button23);
@@ -380,5 +392,6 @@
         private Button button23;
         private Button button24;
         private Button button25;
+        private Button button26;
     }
 }
