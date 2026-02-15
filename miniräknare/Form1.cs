@@ -187,19 +187,54 @@ namespace miniräknare
 
         private void button25_Click(object sender, EventArgs e)//BIN
         {
-
+            int dec = Convert.ToInt32(textBox1.Text);
+            textBox1.Text = Convert.ToString(dec, 2);
         }
 
         private void button26_Click(object sender, EventArgs e)//%
         {
-            if (raknesatt == "+");
+            double procent = Convert.ToDouble(textBox1.Text) / 100;
+
+            if (raknesatt == "+")
             {
-                textBox1.Text = (forsta_talet * ((Convert.ToDouble(textBox1.Text) / 100) + 1)).ToString();
+                textBox1.Text = (forsta_talet * (1 + procent)).ToString();
             }
             if (raknesatt == "-")
             {
-                textBox1.Text = (forsta_talet * (1 - (Convert.ToDouble(textBox1.Text) / 100))).ToString(); //ska fixas
+                textBox1.Text = (forsta_talet * (1 - procent)).ToString();
             }
+        }
+
+        private void button27_Click(object sender, EventArgs e)//sin
+        {
+            double grader = Convert.ToDouble(textBox1.Text);
+            double radianer = grader * Math.PI / 180;
+            double sin = Math.Sin(radianer);
+
+            textBox1.Text = sin.ToString();
+        }
+
+        private void button28_Click(object sender, EventArgs e)//cos
+        {
+            double grader = Convert.ToDouble(textBox1.Text);
+            double radianer = grader * Math.PI / 180;
+            double cos = Math.Cos(radianer);
+
+            textBox1.Text = cos.ToString();
+        }
+
+        private void button29_Click(object sender, EventArgs e)//tan
+        {
+            double grader = Convert.ToDouble(textBox1.Text);
+            double radianer = grader * Math.PI / 180;
+            double tan = Math.Tan(radianer);
+
+            textBox1.Text = tan.ToString();
+        }
+
+        private void button30_Click(object sender, EventArgs e)//byta tecken
+        {
+            textBox1.Text = (Convert.ToDouble(textBox1.Text) * -1).ToString();
         }
     }
 }
