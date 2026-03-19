@@ -105,15 +105,15 @@ namespace miniräknare
         {
             if (raknesatt == "+")
                 textBox1.Text = (forsta_talet + Convert.ToDouble(textBox1.Text)).ToString();
-            if (raknesatt == "-")
+            else if (raknesatt == "-")
             {
                 textBox1.Text = (forsta_talet - Convert.ToDouble(textBox1.Text)).ToString();
             }
-            if (raknesatt == "*")
+            else if (raknesatt == "*")
             {
                 textBox1.Text = (forsta_talet * Convert.ToDouble(textBox1.Text)).ToString();
             }
-            if (raknesatt == "/")
+            else if (raknesatt == "/")
             {
                 textBox1.Text = (forsta_talet / Convert.ToDouble(textBox1.Text)).ToString();
             }
